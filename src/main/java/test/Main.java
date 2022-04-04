@@ -1,7 +1,5 @@
 package test;
 
-import java.util.Locale;
-
 public class Main {
     public static void main(String[] args) {
 //        ToStringTest j = new ToStringTest();
@@ -20,7 +18,20 @@ public class Main {
 //        System.out.println(test.toLowerCase(Locale.ROOT).endsWith("beer?"));
 //        System.out.println(test.concat(" Is ").concat("not ").concat("a question!"));
 //        System.out.println(test.compareToIgnoreCase("Two beEr, Or nOt tWo beeR?"));
-BuildRhomb buildRhomb = new BuildRhomb();
-buildRhomb.buildRhomb(11);
+//BuildRhomb buildRhomb = new BuildRhomb();
+//buildRhomb.buildRhomb(19);
+
+        // BuildRhombWithStringBuilder rhomb = new BuildRhombWithStringBuilder();
+        // System.out.println(rhomb.buildRhomb(11));
+
+        // SnakeBuilder snakeBuilder = new SnakeBuilder();
+        // System.out.println(snakeBuilder.buildSnake(2,9,7));
+
+        SnakeBuilder snakeBuilder = new SnakeBuilder();
+        int length = 0;
+        int hight = 0;
+        System.out.println(snakeBuilder.dialog(length, hight));
+
+
     }
 }
