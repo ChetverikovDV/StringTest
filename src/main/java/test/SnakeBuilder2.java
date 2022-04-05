@@ -11,7 +11,7 @@ public class SnakeBuilder2 {
         } else {
             curves = 80 / (2 * length - 2) * 2;
         }
-
+                                                                    //Проверки простенькие
         if (hight < 3) {
             curves = 0;
             length = 0;
