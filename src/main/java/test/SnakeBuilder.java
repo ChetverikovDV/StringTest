@@ -3,7 +3,7 @@ package test;
 import java.util.Scanner;
 
 public class SnakeBuilder {
-    public String buildSnake(int length, int hight) {
+    private String buildSnake(int length, int hight) {
         int curves = 80 / length;
         System.out.println(curves + " извилин(ы)");
         StringBuilder result = new StringBuilder();

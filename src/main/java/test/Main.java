@@ -27,7 +27,7 @@ public class Main {
         // SnakeBuilder snakeBuilder = new SnakeBuilder();
         // System.out.println(snakeBuilder.buildSnake(2,9,7));
 
-        SnakeBuilder snakeBuilder = new SnakeBuilder();
+        SnakeBuilder2 snakeBuilder = new SnakeBuilder2();
         int length = 0;
         int hight = 0;
         System.out.println(snakeBuilder.dialog(length, hight));
