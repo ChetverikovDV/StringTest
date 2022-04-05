@@ -4,8 +4,24 @@ import java.util.Scanner;
 
 public class SnakeBuilder2 {
     private String buildSnake(int length, int hight) {
-        int curves = 80 / (2 * length - 2) * 2;
-        System.out.println(curves / 2 + " извилин(ы)");
+        int curves;
+        if (length < 3 || length > 41) {
+            curves = 0;
+            hight = 0;
+        } else {
+            curves = 80 / (2 * length - 2) * 2;
+        }
+
+        if (hight < 3) {
+            curves = 0;
+            length = 0;
+        }
+        if (curves == 0) {
+            System.out.println("Такое не рисуем");
+        }
+        if (length == 41){
+            System.out.println("Кое как влезли");
+        }
         StringBuilder result = new StringBuilder();
 
         result.append(" ");                                         // Отступ 1
@@ -21,7 +37,6 @@ public class SnakeBuilder2 {
 
         for (int h = 0; h < hight - 2; h++) {
             result.append(" ");                                   //Отступ 1
-
             for (int c = 0; c < curves; c++) {                    // Формируем вертикальные стенки
                 for (int l = 0; l < length - 2; l++) {
                     result.append(" ");
