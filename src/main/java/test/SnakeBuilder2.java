@@ -5,22 +5,13 @@ import java.util.Scanner;
 public class SnakeBuilder2 {
     private String buildSnake(int length, int hight) {
         int curves;
-        if (length < 3 || length > 41) {
+        if (length < 3 || length > 40 || hight < 3) {                 // проверок чуть
             curves = 0;
             hight = 0;
+            length =0;
+            System.out.println("Такое не рисуем");
         } else {
             curves = 80 / (2 * length - 2) * 2;
-        }
-                                                                    //Проверки простенькие
-        if (hight < 3) {
-            curves = 0;
-            length = 0;
-        }
-        if (curves == 0) {
-            System.out.println("Такое не рисуем");
-        }
-        if (length == 41){
-            System.out.println("Кое как влезли");
         }
         StringBuilder result = new StringBuilder();
 

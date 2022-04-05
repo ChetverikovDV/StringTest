@@ -32,6 +32,5 @@ public class Main {
         int hight = 0;
         System.out.println(snakeBuilder.dialog(length, hight));
 
-
     }
 }
