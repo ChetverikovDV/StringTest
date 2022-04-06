@@ -45,13 +45,13 @@ public class SnakeBuilder2 {
         System.out.println("Длина фрагмента");
         length = scanner.nextInt();
         if (length < 3 || length > 40) {                 // проверок чуть
-            System.out.println("Такое не рисуем");
+            System.out.println("Такое не рисуем. Недопустимая длина");
             return dialog(length, hight);
         }
         System.out.println("Высота фрагмента");
         hight = scanner.nextInt();
         if (hight < 3) {                                 // проверок чуть
-            System.out.println("Такое не рисуем");
+            System.out.println("Такое не рисуем. Недопустимая высота");
             return dialog(length, hight);
         }
         return buildSnake(length, hight);
