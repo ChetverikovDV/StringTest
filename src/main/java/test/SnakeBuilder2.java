@@ -4,15 +4,7 @@ import java.util.Scanner;
 
 public class SnakeBuilder2 {
     private String buildSnake(int length, int hight) {
-        int curves;
-        if (length < 3 || length > 40 || hight < 3) {                 // проверок чуть
-            curves = 0;
-            hight = 0;
-            length =0;
-            System.out.println("Такое не рисуем");
-        } else {
-            curves = 80 / (2 * length - 2) * 2;
-        }
+        int curves = 80 / (2 * length - 2) * 2;
         StringBuilder result = new StringBuilder();
 
         result.append(" ");                                         // Отступ 1
@@ -54,6 +46,13 @@ public class SnakeBuilder2 {
         length = scanner.nextInt();
         System.out.println("Высота фрагмента");
         hight = scanner.nextInt();
+        if (length < 3 || length > 40 || hight < 3) {                 // проверок чуть
+            //curves = 0;
+            hight = 0;
+            length =0;
+            System.out.println("Такое не рисуем");
+            return dialog(length,hight);
+        }
         return buildSnake(length, hight);
 
     }
