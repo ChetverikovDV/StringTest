@@ -51,7 +51,7 @@ public class SnakeBuilder2 {
         System.out.println("Высота фрагмента");
         hight = scanner.nextInt();
         if (hight < 3) {                                 // проверок чуть
-            System.out.println("Такое не рисуем. Недопустимая высота");
+            System.out.println("Такое не рисуем. Недопустимая высота ");
             return dialog(length, hight);
         }
         return buildSnake(length, hight);
