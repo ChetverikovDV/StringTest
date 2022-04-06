@@ -47,11 +47,10 @@ public class SnakeBuilder2 {
         System.out.println("Высота фрагмента");
         hight = scanner.nextInt();
         if (length < 3 || length > 40 || hight < 3) {                 // проверок чуть
-            //curves = 0;
             hight = 0;
-            length =0;
+            length = 0;
             System.out.println("Такое не рисуем");
-            return dialog(length,hight);
+            return dialog(length, hight);
         }
         return buildSnake(length, hight);
 
